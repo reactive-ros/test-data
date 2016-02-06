@@ -11,4 +11,8 @@ public final class Threads {
             e.printStackTrace();
         }
     }
+
+    public static void sleep() {
+        sleep(Long.MAX_VALUE);
+    }
 }

@@ -16,11 +16,7 @@ public class TestInfo {
         this.s2 = s2;
     }
 
-    public Object[] getS1() {
-        return s1.toBlocking().toList().toArray();
-    }
-
-    public Object[] getS2() {
-        return s2.toBlocking().toList().toArray();
+    public boolean equality() {
+        return (boolean) Stream.sequenceEqual(s1, s2).toBlocking().first();
     }
 }
