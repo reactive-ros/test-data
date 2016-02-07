@@ -126,11 +126,11 @@ public final class TestData {
                 Stream.just(0, 2)
         );
         tests.put("onErrorResumeNext",
-                Stream.just(0, 1, 2).concatMap(i -> (i == 1) ? Stream.error(null) : Stream.just(i)).onErrorResumeNext(Stream.just(10, 20)),
+                Stream.just(0, 1, 2).concatMap(i -> (i == 1) ? Stream.error(new Throwable()) : Stream.just(i)).onErrorResumeNext(Stream.just(10, 20)),
                 Stream.just(0, 10, 20)
         );
         tests.put("onErrorReturn",
-                Stream.just(0, 1, 2).concatMap(i -> (i == 1) ? Stream.error(null) : Stream.just(i)).onErrorReturn(t -> 100),
+                Stream.just(0, 1, 2).concatMap(i -> (i == 1) ? Stream.error(new Throwable()) : Stream.just(i)).onErrorReturn(t -> 100),
                 Stream.just(0, 100)
         );
         tests.put("reduce1",
