@@ -2,6 +2,8 @@ package test_data;
 
 import org.reactive_ros.Stream;
 
+import java.util.Arrays;
+
 /**
  * @author Orestis Melkonian
  */
@@ -17,13 +19,10 @@ public class TestInfo {
     }
 
     public boolean equality() {
-        return (boolean) Stream.sequenceEqual(s1, s2).toBlocking().first();
-    }
-
-    public Object[] getS1() {
-        return s1.toBlocking().toList().toArray();
-    }
-    public Object[] getS2() {
-        return s2.toBlocking().toList().toArray();
+        return Arrays.equals(
+                s1.toBlocking().toQueue().toArray(),
+                s2.toBlocking().toQueue().toArray()
+        );
+//        return (boolean) Stream.sequenceEqual(s1, s2).toBlocking().first();
     }
 }
