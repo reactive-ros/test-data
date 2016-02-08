@@ -19,4 +19,11 @@ public class TestInfo {
     public boolean equality() {
         return (boolean) Stream.sequenceEqual(s1, s2).toBlocking().first();
     }
+
+    public Object[] getS1() {
+        return s1.toBlocking().toList().toArray();
+    }
+    public Object[] getS2() {
+        return s2.toBlocking().toList().toArray();
+    }
 }
