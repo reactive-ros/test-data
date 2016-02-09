@@ -85,10 +85,6 @@ public final class TestData {
                 Stream.range(0, 100).first(),
                 Stream.just(0)
         );
-        tests.put("flatMap",
-                Stream.just(0, 10, 20).flatMap(i -> Stream.range(i, 10)),
-                Stream.range(0, 30)
-        );
         tests.put("from",
                 Stream.from(Arrays.asList(1, 2, 3, 4, 5)),
                 Stream.just(1, 2, 3, 4, 5)
