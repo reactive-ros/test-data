@@ -11,12 +11,16 @@ import java.util.concurrent.TimeUnit;
  */
 public final class TestData {
 
-    public static Iterable<TestInfo> tests() {
+    public static List<TestInfo> tests() {
         Tests tests = new Tests();
 
         /**
          * Operators
          */
+        tests.put("fromSource",
+                Stream.from(new TestSource()),
+                Stream.just(true)
+        );
         tests.put("all",
                 Stream.just(1, 2, 3, 4, 5).all(i -> i < 6),
                 Stream.just(true)
@@ -243,7 +247,7 @@ public final class TestData {
                 Stream.just(15)
         );
 
-        return tests.queue;
+        return (List<TestInfo>) tests.queue;
     }
 
     private static class Tests {

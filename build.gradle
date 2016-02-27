@@ -20,9 +20,6 @@ configurations.all {
 dependencies {	
 	// reactive-ros
 	compile 'com.github.reactive-ros:reactive-ros:-SNAPSHOT'
-
-  // Testing
-  testCompile 'junit:junit:4.11'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
