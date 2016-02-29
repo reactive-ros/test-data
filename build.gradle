@@ -10,7 +10,7 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-group = "com.github.reactive-ros"
+group = "com.github.rhea-flow"
 version = 1.0
 
 configurations.all {
@@ -19,7 +19,7 @@ configurations.all {
 }
 dependencies {	
 	// reactive-ros
-	compile 'com.github.reactive-ros:reactive-ros:-SNAPSHOT'
+	compile 'com.github.rhea-flow:rhea-core:-SNAPSHOT'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {

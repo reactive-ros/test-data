@@ -1,7 +1,7 @@
 package test_data;
 
-import org.reactive_ros.Stream;
-import org.reactive_ros.internal.output.*;
+import org.rhea_core.Stream;
+import org.rhea_core.internal.output.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

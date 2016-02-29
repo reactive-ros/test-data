@@ -1,7 +1,7 @@
 package test_data;
 
-import org.reactive_ros.Stream;
-import org.reactive_ros.util.functions.Func0;
+import org.rhea_core.Stream;
+import org.rhea_core.util.functions.Func0;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
