@@ -19,7 +19,7 @@ public final class TestData {
          */
         tests.put("fromSource",
                 Stream.from(new TestSource()),
-                Stream.just(true)
+                Stream.range(0, 10)
         );
         tests.put("all",
                 Stream.just(1, 2, 3, 4, 5).all(i -> i < 6),
