@@ -11,5 +11,6 @@ public class TestSource implements Source<Integer> {
     public void subscribe(Subscriber<? super Integer> s) {
         for (int i = 0; i < 10; i++)
             s.onNext(i);
+        s.onComplete();
     }
 }
