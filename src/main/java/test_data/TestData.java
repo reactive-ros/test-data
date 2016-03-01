@@ -107,7 +107,7 @@ public final class TestData {
         );
         tests.put("loop",
                 Stream.just(1).loop(entry -> entry.map(i -> i * 2)).take(5),
-                Stream.just(2, 4, 8, 16 ,32)
+                Stream.just(1, 2, 4, 8, 16)
         );
         tests.put("map",
                 Stream.just(0, 1, 2, 3, 4).map(i -> i * i),
